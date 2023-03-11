@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+#top-menu{
+    width: 100%;
+    background-color: darkslategrey;
+    height: 30px;
+}
+a:hover{
+    background-color: rgb(25, 43, 43);
+}
+ul{
+    display: flex;
+    color:darkslategray;
+    padding-top: 1vh;
+    justify-content: center;
+    list-style: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ul>li{
+    padding: 0px 10px;
+    border-left: 1px solid #fff;
+}
+ul>li:first-child{
+    border-left: none;
+}
+a{
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+#banner{
+    background-color: rgb(189, 223, 223);
+    height: 200px;
+    width:100%;
+}
+.banner-text{
+    position: absolute;
+    right: 10%;
+    text-align: right;
+    top: 90px;
+}
+.container{
+    width:100%;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+section{
+    padding:20px 0px;
+}
+#about-me{
+    background-color:aliceblue;
+}
+#my-portfolio{
+    background-color: lightgray;
+}
+#work-experience{
+    background-color:aliceblue;
+}
+#contact-me{
+    background-color: gray;
+}
+#footer{
+    background-color: gray;
+    height: 60px;
+}
+h3{
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+h4{
+    padding-top: 20px;
+    padding-bottom: 15px;
+
+}
+p{
+    padding-bottom: 15px;
+}
+.date{
+    padding-bottom: 10px;
+}
+.copyright{
+    position: absolute;
+    left: 46%;
+    top: 379vh;
+}
+.flex{
+    display:flex; 
+    background-color: rgb(66, 66, 66);
+    flex-wrap:wrap;
+    justify-content: center;
+}
+.flex-content{
+    width: 190px;
+    margin:15px 10px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 5px 5px 1px #757575;
+    border-style: solid;
+    border-width: 1px;
+}
