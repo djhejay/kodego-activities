@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap components</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font_awesome/css/all.min.css">
+    
+    <style>
+        .search-form{
+            margin:10px 0px;
+            border: 1px solid #adadad;
+            padding: 15px 15px;
+        }
+        .border{
+            margin: 10px 10px;
+            padding: 10px 10px;
+        }
+    </style>
+
+    </head>
+    <body>
+        <div class="border">
+            <div class="row">
+            <div class="col-sm-9 fs-3 text-warning">Clients</div>
+            <div class="col-sm-2 btn btn-success"><i class="fa-solid fa-plus"></i>Add Client</div>
+        </div>
+        <form class="search-form">
+            <div class="row">
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" placeholder="Keyword">
+                </div>
+                <div class="col-sm-1 btn btn-info">Search</div>
+            </div> 
+        </form>
+        <table class="table table-striped">
+            <thead>
+              <tr class="bg-success">
+                <th>Name</th>
+                <th>ID</th>
+                <th>Address</th>
+                <th>Contact Number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ed Sheeran</td>
+                <td>1011834657</td>
+                <td>711-2880 Nulla St.
+                    Mankato Mississippi 96522</td>
+                <td>(257) 563-7401</td>
+              </tr>
+              <tr>
+                <td>Olivia Rodrigo</td>
+                <td>1011857635</td>
+                <td>P.O. Box 283 8562 Fusce Rd.
+                    Frederick Nebraska 20620</td>
+                <td>(372) 587-2335</td>
+              </tr>
+              <tr>
+                <td>Theodore Lowe</td>
+                <td>1011867254</td>
+                <td>Ap #867-859 Sit Rd.
+                    Azusa New York 39531</td>
+                <td>(793) 151-6230</td>
+              </tr>
+              <tr>
+                <td>Calista Wise</td>
+                <td>1011846375</td>
+                <td>7292 Dictum Av.
+                    San Antonio MI 47096</td>
+                <td>(492) 709-6392</td>
+              </tr>
+              <tr>
+                <td>Kyla Olsen</td>
+                <td>1011838745</td>
+                <td>Ap #651-8679 Sodales Av.
+                    Tamuning PA 10855</td>
+                <td>(654) 393-5734</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="row">
+            <div class="col-sm-6">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">.</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">.</a></li>
+                    <div class="text-muted">16-20/20 records</div>
+                </ul>
+            </div>
+          </div>
+        </div>
+    </body>
+</html>
