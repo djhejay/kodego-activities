@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Exercise 3</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font_awesome/css/all.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        .border{
+            margin: 10px 10px;
+            padding: 10px 10px;
+        }
+        .container>.row{
+            margin: 10px 0px;
+        }
+        .tabs{
+            height: auto;
+        }
+        .nav-item{
+            margin: 10px 5px 0px 5px;
+            border-top: 3px solid #ffc400;
+            border-left: 1px solid #adadad;
+            border-right: 1px solid #adadad;
+        }
+        .profile{
+            display:block;
+            width: 170px;
+            margin-top: 10px;
+        }
+        .upload{
+            display: block;
+            width: 150px;
+        }
+        .card-body>.row{
+            background-color: rgb(253, 253, 232);
+            margin-top: -12px;
+            margin-bottom: -12px;
+        }
+    </style>
+
+    </head>
+    <body>
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item active" aria-current="page">Back to list</li>
+                </ol>
+              </nav>
+            <div class="card mb-3">
+                <div class="card header">
+                    <div class="row">
+                        <div class="col-sm-10 fs-3 text-warning">Client Profile (John Doe)</div>
+                        <div class="col-sm-2 text-end">
+                            <button type="button" class="btn btn-success"><i class="fa-solid fa-plus"></i>Add Client</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="profile col-sm-3 mx-auto">
+                            <img src="assets/profile.svg">
+                        </div>   
+                            <div class="col-sm-5">
+                                <table class="table table-borderless">
+                                    <tr>
+                                        <td class="text-end">ID:</td>
+                                        <td>1011834657</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Birthdate:</td>
+                                        <td>10-20-1983</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Start Date:</td>
+                                        <td>10-27-2022</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-end">Language:</td>
+                                        <td>English</td>
+                                    </tr>    
+                            </table>
+                            </div>
+                        <div class="col-sm-4 fs-3 text-end">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3 text-center">
+                            <button type="button" class="btn btn-info">Upload Photo</button>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="nav nav-tabs">
+            <li class="nav-item"><a class="nav-link active" data-bs-toggle="tab" href="#contact-details">Contact Details</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#files-attached">Files Attached</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#service-delivered">Service Delivered</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#client-progress-notes">Client Progress Notes</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#client-funds-monitor">Client Funds Monitor</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#time-tracker">Time Tracker</a></li>
+            <li class="nav-item"><a class="nav-link" data-bs-toggle="tab" href="#feedback-and-complaints">Feedback and Complaints</a></li>         
+        </ul>
+            
+        <div class="tab-content">
+            <div id="contact-details" class="tab-pane fade show active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="address1" class="form-label">Address 1</label>
+                            <input type="text" class="form-control" id="address1" placeholder="Address">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="address2" class="form-label">Address 2</label>
+                            <input type="text" class="form-control" id="address2" placeholder="Address">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="Enter State">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter City">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="postal" class="form-label">Postal Code</label>
+                            <input type="text" class="form-control" id="postal" placeholder="Enter Postal Code">
+                        </div>
+                        <div class="col-sm-3">
+                            <label class="form-label">Country</label>
+                            <select class="form-control form-select">
+                                <option>-- None Selected --</option>
+                                <option>Philippines</option>
+                                <option>US</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <label for="mobile" class="form-label">Mobile Number</label>
+                            <input type="text" class="form-control" id="mobile" placeholder="Enter Mobile Number">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="telephone" class="form-label">Home Number</label>
+                            <input type="text" class="form-control" id="telephone" placeholder="Enter Home Number">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter Email">
+                        </div>
+                        <div class="col-sm-3">
+                            <label for="other" class="form-label">Other Number</label>
+                            <input type="text" class="form-control" id="other" placeholder="Other Number">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div id="files-attached" class="tab-pane fade">
+                <div class="container">
+                    <h2>Document Files</h2>
+                </div>
+            </div>
+            <div id="service-delivered" class="tab-pane fade">
+                <div class="container">
+                    <h2>Service Delivered</h2>
+                </div>
+            </div>
+            <div id="client-progress-notes" class="tab-pane fade">
+                <div class="container">
+                    <h2>Client Progress Notes</h2>
+                </div>
+            </div>
+            <div id="client-funds-monitor" class="tab-pane fade">
+                <div class="container">
+                    <h2>Client Funds Monitor</h2>
+                </div>
+            </div>
+            <div id="time-tracker" class="tab-pane fade">
+                <div class="container">
+                    <h2>TIme Tracker</h2>
+                </div>
+            </div>
+            <div id="feedback-and-complaints" class="tab-pane fade">
+                <div class="container">
+                    <h2>Feedback and Complaints</h2>
+                </div>
+            </div>
+        </div>
+    </div>   
+    </body>
+</html>
