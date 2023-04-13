@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test Practice using CSS/Javascript</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="site-title">JavaScript Hands on Exercise 3
+        </h1>
+    </header>
+
+    <section class="">
+        <div class="problem1">
+            <h2 class="section-title">Machine Problem 1</h2>
+            <label>Display all the names and age of the staff.</label>
+            <h3 id="output_problem_1"></h3>
+        </div>
+    </section>
+    <section class="">
+        <div class="problem2">
+            <h2 class="section-title">Machine Problem 2</h2>
+            <label>Determine the number of staff with age greater than 30 years old.</label>
+            <h3 id="output_problem_2"></h3>
+        </div>
+    </section>
+    <section class="">
+        <div class="problem3">
+            <h2 class="section-title">Machine Problem 3</h2>
+            <label>Determine the number of staff that can speak Spanish.</label>
+            <h3 id="output_problem_3"></h3>
+        </div>
+    </section>
+    <script>
+        let staff = [{name: "Oliver Queen", title: "CEO", gender: "male", age: 38, languages: ["english", "spanish"]}, 
+                    {name: "Ben Hur", title: "Security consultant", gender: "male", age: 25, languages: ["latin", "italian"]}, 
+                    {name: "Jessica Alba", title: "Admin Assistant", gender: "female", age: 23, languages: ["english", "spanish"]}, 
+                    {name: "Pepper Piper", title: "Quality Assurance", gender: "female", age: 32, languages: ["english", "spanish"]},
+                    {name: "Red Sullivan", title: "Project Manager", gender: "male", age: 27, languages: ["russian", "english"]},
+                    {name:"Juan Dela Cruz", title: "Manager", age: 24, gender: "male", languages: ["russian", "french"]},
+                    {name:"Anna Salvador", title: "Junior Dev", age: 21, gender: "female", languages: ["english", "french"]},
+                    {name:"Mark Bautista", title: "Senior Fullstack Dev", age: 28, gender: "male", languages: ["russion", "spanish"]},
+                    {name:"Micheal Garcia", title: "CEO", age: 40, gender: "male", languages: ["english", "latin"]}];
+
+                    for(let i in staff){
+                        let staffs = staff[i];
+                        document.getElementById('output_problem_1').innerHTML += '<br>' + staffs.name + " (" + staffs.age + ")" ;
+                }   
+
+                let GreaterThan30 = 0;
+                staff.forEach(function(staffs){
+                    if (staffs.age > 30){
+                        GreaterThan30 ++;
+                    }  
+                })
+                document.getElementById('output_problem_2').innerHTML += GreaterThan30;
+
+                let speakSpanish = 0;
+                staff.forEach(function(staffs){
+                    if (staffs.languages.includes('spanish')){
+                        speakSpanish ++;
+                    }  
+                })
+                document.getElementById('output_problem_3').innerHTML += speakSpanish;
+
+    </script>
+</body>
+
+</html>
