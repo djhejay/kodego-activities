@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test Practice using CSS/Javascript</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="site-title">JavaScript Hands on Exercise 2
+        </h1>
+    </header>
+
+    <section class="">
+        <div class="problem1">
+            <h2 class="section-title">Machine Problem 1</h2>
+            <label for="inputNumChar">Input Single Character only: </label>
+            <input type="text" id="inputNumChar" maxlength="1">
+            <button onclick="CheckLetter()">Check Vowel</button>
+            <h3 id="output_problem_1"></h3>
+        </div>
+    </section>
+    <section class="">
+        <div class="problem2">
+            <h2 class="section-title">Machine Problem 2</h2>
+            <label>Perform the equivalent operations on the 2 inputted numbers.</label></br>
+            <input type="number" id="inputNumber1">
+            <input type="number" id="inputNumber2"></br>
+            <button onclick="add()">+</button>
+            <button onclick="subtract()">-</button>
+            <button onclick="multiply()">x</button>
+            <button onclick="division()">/</button>
+            <button onclick="exponential()">exponential</button>
+            <h3 id="output_problem_2"></h3>
+        </div>
+    </section>
+    <script>
+
+        function CheckLetter() {
+            let character = document.getElementById('inputNumChar').value.toLowerCase()
+ 
+            switch(character){
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    document.getElementById('output_problem_1').innerHTML = 'The Letter declared is a Vowel';
+                    break;
+                default:
+                    document.getElementById('output_problem_1').innerHTML = 'The Letter declared is a Consonant';
+                    break;
+            }
+        }
+
+        function add(){
+            let number1 = document.getElementById('inputNumber1').value;
+            let number2 = document.getElementById('inputNumber2').value;
+
+            let totalsum = number1 + number2;
+            document.querySelector('output_problem_2').innerHTML = "Answer:" + " " + totalsum;
+        }
+
+        function subtract(){
+            let number1 = document.getElementById('inputNumber1').value;
+            let number2 = document.getElementById('inputNumber2').value;
+
+            let diff = number1 - number2;
+            document.getElementById('output_problem_2').innerHTML = "Answer:" + " " + diff;
+        }
+
+        function multiply(){
+            let number1 = document.getElementById('inputNumber1').value;
+            let number2 = document.getElementById('inputNumber2').value;
+
+            let product = number1 * number2;
+            document.getElementById('output_problem_2').innerHTML = "Answer:" + " " + product;
+        }
+
+        function division(){
+            let number1 = document.getElementById('inputNumber1').value;
+            let number2 = document.getElementById('inputNumber2').value;
+
+            let quotient = number1 / number2;
+            document.getElementById('output_problem_2').innerHTML = "Answer:" + " " + quotient;
+        }
+
+        function exponential(){
+            let number1 = document.getElementById('inputNumber1').value;
+            let number2 = document.getElementById('inputNumber2').value;
+
+            let expo = number1 ** number2;
+            document.getElementById('output_problem_2').innerHTML = "Answer:" + " " + expo;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Test Practice using CSS/Javascript</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="site-title">JavaScript Hands on Exercise 6
+        </h1>
+    </header>
+
+    <section class="">
+        <div class="problem1">
+            <h2 class="section-title">Machine Problem 1</h2>
+            <label>Write a program to convert a digit into its word counterpart.</label><br>
+            <label>Input Number:</label>
+            <input type="number" id="inputNum">
+            <button onclick="convert()">Convert to Words</button>
+            <h3 id="output_problem_1"></h3>
+        </div>
+    </section>
+    <section class="">
+        <div class="problem2">
+            <h2 class="section-title">Machine Problem 2</h2>
+            <label>Calculate the average score of the 3 numbers.</label><br>
+            <label>First Number:</label>
+            <input type="number" id="inputNum1"><br>
+            <label>Second Number:</label>
+            <input type="number" id="inputNum2"><br>
+            <label>Third Number:</label>
+            <input type="number" id="inputNum3"><br>
+            <button onclick="calculateAverage()">Calculate</button>
+            <h3 id="output_problem_2"></h3>
+        </div>
+    </section>
+    <script>
+
+        //MachineProblem 1
+        function numtoWord(number){
+            const words = ["Zero","One","Two","Three","Four","Five","Six","Seven","Eight","Nine"];
+            let result = "";
+            let numString = number.toString();
+
+            for (let i = 0; i < numString.length; i++){
+                let numbers = parseInt(numString[i]);
+                result += words[numbers] + " ";
+            }
+            return result.trim();
+        }
+        
+
+        function convert(){
+            
+            let num = document.getElementById("inputNum").value;
+            let number = parseInt(num);
+            if (isNaN(number)) {
+                document.getElementById("result").innerHTML = "Invalid input."
+            }else{
+                let word = numtoWord(number);
+                let output = num + " - " + word;
+                document.getElementById("output_problem_1").innerHTML = output;
+            }
+        }
+
+        //Machine Problem 2
+        window.onload = function(){
+            document.getElementById("inputNum1").value = Math.floor(Math.random() * (50)) + 51;
+            document.getElementById("inputNum2").value = Math.floor(Math.random() * (50)) + 51;
+            document.getElementById("inputNum3").value = Math.floor(Math.random() * (50)) + 51;
+        }
+        function calculateAverage(){
+            let num1 = parseInt(document.getElementById("inputNum1").value);
+            let num2 = parseInt(document.getElementById("inputNum2").value);
+            let num3 = parseInt(document.getElementById("inputNum3").value);
+            let average = (num1 + num2 + num3) / 3;
+
+            if (average < 75){
+                document.getElementById("output_problem_2").innerHTML = "Average: " + average.toFixed(1) + " - " + "Failed";
+            }else{
+                document.getElementById("output_problem_2").innerHTML = "Average: " + average.toFixed(1) + " - " + "Passed";
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
